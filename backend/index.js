@@ -1,11 +1,18 @@
 const express = require('express');
 const app = express();
 const axios = require('axios');
+const cors = require('cors');
+var bodyParser = require('body-parser');
 
 const port = 3001;
 
 app.use(express.json());
+app.use(cors());
 
+app.use(bodyParser.json()); 
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
 
 // Variaveis
 
@@ -33,10 +40,10 @@ function saveFavorite(username){
     axios.get(`https://api.github.com/users/${username}`)
     .then((res)=>{
         favorites.push({
-            "username": res.username, 
-            "name": res.name, 
-            "avatar": res.avatar_url, 
-            "url": res.url,
+            "username": username, 
+            "name": res.data.name, 
+            "avatar": res.data.avatar_url, 
+            "url": res.data.url,
             "star": false
         });
     })
@@ -57,13 +64,11 @@ app.get('/users', (req, res)=>{
 
 // adiciona um favorito
 app.post('/users', (req, res)=>{    
-    let body = req.body;
-    console.log(body)
 
     if(favorites.length < 5){
         // verifica de existe um user no array de favoritos
         let containFavotires = 0;
-        favotites.map(val =>{
+        favorites.map(val =>{
             if(val.name == req.body.username){
                 containFavotires += 1;
             }
@@ -72,26 +77,25 @@ app.post('/users', (req, res)=>{
         if(containFavotires == 0 ){
             // se não existir um usuário no array de favoritos verifica na API e salva se existir
             let containGithub = 0;
+            
             githubUsers.map(val =>{
                 if(val.login == req.body.username){
-                    containGithub += 1;
+                    
+                    containGithub = 1;
                 }
             })
 
             if(containGithub == 1){
                 saveFavorite(req.body.username);
-                res.status(201) // aceito
+                res.status(201).json('Adicionado') // aceito
             }else{
-                res.status(406) //não aceito
-                res.send('Usuários não encontrado no github')
+                res.status(406).json('Usuários não encontrado no github')
             }
         }else{
-            res.status(406) //não aceito
-            res.send('Usuário já existe no array')
+            res.status(406).json('Usuário já existe no array')
         }
     }else{
-        res.status(406) //não aceito
-        res.send(`Array já possui ${favorites.length} usuários`)
+        res.status(406).json(`Array já possui ${favorites.length} usuários`)
     }
 })
 

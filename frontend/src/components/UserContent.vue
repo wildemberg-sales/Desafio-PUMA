@@ -75,6 +75,7 @@ import axios from 'axios';
   border: 1px solid #ccc;
   border-radius: 15px;
   padding: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .user img{
   width: 200px;
@@ -104,7 +105,8 @@ import axios from 'axios';
   cursor: pointer;
 }
 .user-star:hover, .user-remove:hover, .user-link:hover{
-  border-color: aqua;
+  border-color: rgb(8, 236, 236);
+  background-color: rgba(8, 236, 236, 0.3);
 }
 .user-star img, .user-remove img, .user-link img{
   width: 32px;

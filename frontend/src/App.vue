@@ -6,7 +6,7 @@
       <h2>Adicionar usuário aos favoritos:</h2>
 
       <input type="text" placeholder="Digite o username do usuário..." name="username" id="input-username"/>
-      <button type="submit" @click="cadastrar()">Enviar</button>
+      <button type="submit" @click="cadastrar()">Adicionar</button>
       
       <MsgErro :msg="msgErro" v-show="msgErro"/>
     </div><!--box-form-->
@@ -29,7 +29,7 @@ import MsgErro from './components/MsgErro.vue';
 import NavBar from './components/NavBar.vue'
 import UserContent from './components/UserContent.vue';
 
-import axios from 'axios'
+import axios from 'axios';
 
 
 export default {
@@ -69,7 +69,8 @@ export default {
       })
     },
     ordenar(){
-     this.favorits[0].sort((a, b)=>{
+      
+      this.favorits[0].sort((a, b)=>{
         if(a.name < b.name){
           return -1;
         }else if(a.name > b.name){
@@ -79,6 +80,8 @@ export default {
         }
       })
     }
+     
+    
   }
 }
 
@@ -149,13 +152,15 @@ h2{
   justify-content: space-evenly;
   align-items: center;
   text-align: center;
+  height: 500px;
   padding: 20px 0;
   border: 1px solid #ccc;
   border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7), 0 6px 20px 0 rgba(0, 0, 0, 0.7);
 }
 
 .button-order{
-  padding: 10px 20px;
+  padding: 30px 20px;
   margin: 0 auto;
   margin-top: 10px;
   font-size: 15px;

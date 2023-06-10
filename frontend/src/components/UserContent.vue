@@ -70,4 +70,43 @@ import axios from 'axios';
 </script>
 <style>
 
+.user{
+  width: calc((100% / 5) - 10px);
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  padding: 10px;
+}
+.user img{
+  width: 200px;
+  border-radius: 10px;
+}
+
+.user-content{
+  padding: 10px 0;
+  line-height: 30px;
+}
+.user-content span{
+  font-weight: bold;
+}
+
+.user-buttons{
+  display: flex;
+  justify-content: space-around;
+  padding: 0 20px;
+  margin: 30px 0;
+}
+
+.user-star, .user-remove, .user-link{
+  border: 1px solid #ccc;
+  border-radius: 100%;
+  padding: 15px;
+  transition: 0.7s;
+  cursor: pointer;
+}
+.user-star:hover, .user-remove:hover, .user-link:hover{
+  border-color: aqua;
+}
+.user-star img, .user-remove img, .user-link img{
+  width: 32px;
+}
 </style>

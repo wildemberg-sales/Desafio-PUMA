@@ -48,8 +48,8 @@ import axios from 'axios';
                     function reload(){
                         location.reload();
                     }
-                }).catch((err)=>{
-                    console.log(err)
+                }).catch(()=>{
+                    
                 })
                
             },
@@ -60,8 +60,8 @@ import axios from 'axios';
                     function reload(){
                         location.reload();
                     }
-                }).catch((err)=>{
-                    console.log(err)
+                }).catch(()=>{
+                    
                 })
                 
             }

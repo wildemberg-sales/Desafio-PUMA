@@ -1,13 +1,14 @@
 <template>
   <NavBar></NavBar>
   <section>
-    
+
     <div class="box-form">
       <h2>Adicionar usuário aos favoritos:</h2>
 
       <input type="text" placeholder="Digite o username do usuário..." name="username" id="input-username"/>
       <button type="submit" @click="cadastrar()">Enviar</button>
       
+      <MsgErro :msg="msgErro" v-show="msgErro"/>
     </div><!--box-form-->
 
 
@@ -22,6 +23,7 @@
 </template>
 
 <script>
+import MsgErro from './components/MsgErro.vue';
 import NavBar from './components/NavBar.vue'
 import UserContent from './components/UserContent.vue';
 
@@ -33,11 +35,14 @@ export default {
   components: {
     NavBar,
     UserContent,
+    MsgErro
 },
   data(){
-    const favorits = [];
+    const favorits = []
+    const msgErro = ""
     return{
       favorits,
+      msgErro
     }
   },
   created(){
@@ -60,7 +65,8 @@ export default {
           location.reload();
         }
       }).catch((err)=>{
-        console.log(err)
+        this.msgErro = err.response.data
+        setTimeout(()=>this.msgErro = "", 5000);
       })
       
       

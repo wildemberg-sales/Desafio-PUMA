@@ -4,184 +4,18 @@
     
     <div class="box-form">
       <h2>Adicionar usuário aos favoritos:</h2>
-      <form action="http://localhost:3001/users" method="post" id="form-busca">
-        <input type="text" placeholder="Digite o username do usuário..." name="username"/>
-        <button type="submit" v-on:click="onclick()">Enviar</button>
-      </form>
+
+      <input type="text" placeholder="Digite o username do usuário..." name="username" id="input-username"/>
+      <button type="submit" @click="cadastrar()">Enviar</button>
+      
     </div><!--box-form-->
 
 
     <h2>Favoritos:</h2>
     <div class="box-users">
-
-      <div class="user">
-        
-        <img src="https://avatars.githubusercontent.com/u/1?v=4"/>
-        <div class="user-content">
-          <p>Nome do usuário</p>
-          <p><span>Username:</span> mojombo</p>
-        </div>
-
-        <div class="user-buttons">
-
-          <div class="user-star">
-            <a href="#">
-              <!-- <img src="https://img.icons8.com/tiny-glyph/32/star.png" alt="star"/> -->
-              <img src="https://img.icons8.com/tiny-color/32/star.png" alt="star"/>
-              <legend>Favoritar</legend>
-            </a>
-          </div>
-
-          <div class="user-remove">
-            <a href="#">
-              <img width="50" src="https://img.icons8.com/ios/50/delete--v1.png" alt="delete--v1"/>
-              <legend>Deletar</legend>
-            </a>
-          </div>
-
-          <div class="user-link">
-            <a href="https://github.com/mojombo">
-              <img src="https://img.icons8.com/ios-filled/50/link--v1.png" alt="link--v1"/>
-              <legend>GitHub</legend>
-            </a>
-          </div>
-        
-        </div>
-
-      </div><!--user-->
-
-      <div class="user">
-        
-        <img src="https://avatars.githubusercontent.com/u/1?v=4"/>
-        <div class="user-content">
-          <p>Nome do usuário</p>
-          <p><span>Username:</span> mojombo</p>
-        </div>
-        <div class="user-buttons">
-
-          <div class="user-star">
-            <a href="#">
-              <!-- <img src="https://img.icons8.com/tiny-glyph/32/star.png" alt="star"/> -->
-              <img src="https://img.icons8.com/tiny-color/32/star.png" alt="star"/>
-              <legend>Favoritar</legend>
-            </a>
-          </div>
-
-          <div class="user-remove">
-            <a href="#">
-              <img width="50" src="https://img.icons8.com/ios/50/delete--v1.png" alt="delete--v1"/>
-              <legend>Deletar</legend>
-            </a>
-          </div>
-
-          <div class="user-link">
-            <a href="https://github.com/mojombo">
-              <img src="https://img.icons8.com/ios-filled/50/link--v1.png" alt="link--v1"/>
-              <legend>GitHub</legend>
-            </a>
-          </div>
-        </div>
-      </div><!--user-->
-
-      <div class="user">
-        
-        <img src="https://avatars.githubusercontent.com/u/1?v=4"/>
-        <div class="user-content">
-          <p>Nome do usuário</p>
-          <p><span>Username:</span> mojombo</p>
-        </div>
-        <div class="user-buttons">
-
-          <div class="user-star">
-            <a href="#">
-              <!-- <img src="https://img.icons8.com/tiny-glyph/32/star.png" alt="star"/> -->
-              <img src="https://img.icons8.com/tiny-color/32/star.png" alt="star"/>
-              <legend>Favoritar</legend>
-            </a>
-          </div>
-
-          <div class="user-remove">
-            <a href="#">
-              <img width="50" src="https://img.icons8.com/ios/50/delete--v1.png" alt="delete--v1"/>
-              <legend>Deletar</legend>
-            </a>
-          </div>
-
-          <div class="user-link">
-            <a href="https://github.com/mojombo">
-              <img src="https://img.icons8.com/ios-filled/50/link--v1.png" alt="link--v1"/>
-              <legend>GitHub</legend>
-            </a>
-          </div>
-        </div>
-      </div><!--user-->
-
-      <div class="user">
-        
-        <img src="https://avatars.githubusercontent.com/u/1?v=4"/>
-        <div class="user-content">
-          <p>Nome do usuário</p>
-          <p><span>Username:</span> mojombo</p>
-        </div>
-        <div class="user-buttons">
-
-          <div class="user-star">
-            <a href="#">
-              <!-- <img src="https://img.icons8.com/tiny-glyph/32/star.png" alt="star"/> -->
-              <img src="https://img.icons8.com/tiny-color/32/star.png" alt="star"/>
-              <legend>Favoritar</legend>
-            </a>
-          </div>
-
-          <div class="user-remove">
-            <a href="#">
-              <img width="50" src="https://img.icons8.com/ios/50/delete--v1.png" alt="delete--v1"/>
-              <legend>Deletar</legend>
-            </a>
-          </div>
-
-          <div class="user-link">
-            <a href="https://github.com/mojombo">
-              <img src="https://img.icons8.com/ios-filled/50/link--v1.png" alt="link--v1"/>
-              <legend>GitHub</legend>
-            </a>
-          </div>
-        </div>
-      </div><!--user-->
-
-      <div class="user">
-        
-        <img src="https://avatars.githubusercontent.com/u/1?v=4"/>
-        <div class="user-content">
-          <p>Nome do usuário</p>
-          <p><span>Username:</span> mojombo</p>
-        </div>
-        <div class="user-buttons">
-
-          <div class="user-star">
-            <a href="#">
-              <!-- <img src="https://img.icons8.com/tiny-glyph/32/star.png" alt="star"/> -->
-              <img src="https://img.icons8.com/tiny-color/32/star.png" alt="star"/>
-              <legend>Favoritar</legend>
-            </a>
-          </div>
-
-          <div class="user-remove">
-            <a href="#">
-              <img width="50" src="https://img.icons8.com/ios/50/delete--v1.png" alt="delete--v1"/>
-              <legend>Deletar</legend>
-            </a>
-          </div>
-
-          <div class="user-link">
-            <a href="https://github.com/mojombo">
-              <img src="https://img.icons8.com/ios-filled/50/link--v1.png" alt="link--v1"/>
-              <legend>GitHub</legend>
-            </a>
-          </div>
-        </div>
-      </div><!--user-->
-
+      
+      <UserContent v-for="obj in favorits" :key="obj.id" :userContent="obj" />
+      
     </div><!--box-users-->
 
   </section>
@@ -189,6 +23,7 @@
 
 <script>
 import NavBar from './components/NavBar.vue'
+import UserContent from './components/UserContent.vue';
 
 import axios from 'axios'
 
@@ -197,7 +32,8 @@ export default {
   name: 'App',
   components: {
     NavBar,
-  },
+    UserContent,
+},
   data(){
     const favorits = [];
     return{
@@ -214,11 +50,20 @@ export default {
     })
   },
   methods:{
-    onClick(){
-      let form = document.getElementById('form-busca');
-      form.addEventListener('submit', (e)=>{
-        e.preventDefault();
+    cadastrar(){
+      let username = document.querySelector('#input-username').value;
+      axios.post(`http://localhost:3001/users`,{username : username})
+      .then((res)=>{
+        console.log(res)
+        setTimeout(reload, 500);
+        function reload(){
+          location.reload();
+        }
+      }).catch((err)=>{
+        console.log(err)
       })
+      
+      
     }
   }
 }
@@ -326,6 +171,7 @@ h2{
   border-radius: 100%;
   padding: 15px;
   transition: 0.7s;
+  cursor: pointer;
 }
 .user-star:hover, .user-remove:hover, .user-link:hover{
   border-color: aqua;

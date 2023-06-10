@@ -7,8 +7,11 @@ var bodyParser = require('body-parser');
 const port = 3001;
 
 app.use(express.json());
+
+// uso o cors para gerar um middleware que permite que a aplicação seja acessada
 app.use(cors());
 
+// utilizo o bodyParser para conseguir manipular minhas requisições POST
 app.use(bodyParser.json()); 
 app.use(bodyParser.urlencoded({
     extended: true
@@ -40,10 +43,11 @@ function saveFavorite(username){
     axios.get(`https://api.github.com/users/${username}`)
     .then((res)=>{
         favorites.push({
+            "id": favorites.length + 1,
             "username": username, 
             "name": res.data.name, 
             "avatar": res.data.avatar_url, 
-            "url": res.data.url,
+            "url": res.data.html_url,
             "star": false
         });
     })
@@ -54,7 +58,6 @@ function saveFavorite(username){
 
 app.get('/', (req, res)=>{
     res.json(githubUsers)
-    console.log(githubUsers.length)
 })
 
 // retorna os favoritos
@@ -69,7 +72,7 @@ app.post('/users', (req, res)=>{
         // verifica de existe um user no array de favoritos
         let containFavotires = 0;
         favorites.map(val =>{
-            if(val.name == req.body.username){
+            if(val.username == req.body.username){
                 containFavotires += 1;
             }
         })
@@ -87,15 +90,19 @@ app.post('/users', (req, res)=>{
 
             if(containGithub == 1){
                 saveFavorite(req.body.username);
-                res.status(201).json('Adicionado') // aceito
+                res.status().send(200)
+                
             }else{
-                res.status(406).json('Usuários não encontrado no github')
+                res.status().send(406);
+                
             }
         }else{
-            res.status(406).json('Usuário já existe no array')
+            res.status().send(406);
+            
         }
     }else{
-        res.status(406).json(`Array já possui ${favorites.length} usuários`)
+        res.status().send(406);
+        
     }
 })
 
@@ -108,6 +115,7 @@ app.delete('/users/:username', (req, res)=>{
             favorites.splice(index, 1);
         }
     })
+    res.status().send(200)
 })
 
 // atualiza a estrela dos favoritos
@@ -121,6 +129,7 @@ app.put('/users/:username/toggle-star', (req, res)=>{
             val.star = false;
         }
     })
+    res.status().send(200)
 })
 
 app.listen(port, ()=>{console.log(`Rodando na porta http://localhost:${port}`)});

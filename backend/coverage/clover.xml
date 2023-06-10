@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1686425493779" clover="3.2.0">
-  <project timestamp="1686425493779" name="All files">
+<coverage generated="1686430041020" clover="3.2.0">
+  <project timestamp="1686430041020" name="All files">
     <metrics statements="134" coveredstatements="87" conditionals="7" coveredconditionals="4" methods="1" coveredmethods="0" elements="142" coveredelements="91" complexity="0" loc="134" ncloc="134" packages="1" files="1" classes="1"/>
     <file name="server.js" path="/home/will/workspace/Desafio-PUMA/backend/server.js">
       <metrics statements="134" coveredstatements="87" conditionals="7" coveredconditionals="4" methods="1" coveredmethods="0"/>
@@ -71,44 +71,44 @@
       <line num="65" count="1" type="stmt"/>
       <line num="66" count="1" type="stmt"/>
       <line num="67" count="1" type="cond" truecount="1" falsecount="0"/>
-      <line num="68" count="2" type="stmt"/>
-      <line num="69" count="2" type="stmt"/>
-      <line num="70" count="2" type="stmt"/>
-      <line num="71" count="2" type="stmt"/>
-      <line num="72" count="2" type="stmt"/>
+      <line num="68" count="3" type="stmt"/>
+      <line num="69" count="3" type="stmt"/>
+      <line num="70" count="3" type="stmt"/>
+      <line num="71" count="3" type="stmt"/>
+      <line num="72" count="3" type="stmt"/>
       <line num="73" count="0" type="stmt"/>
       <line num="74" count="0" type="stmt"/>
       <line num="75" count="0" type="stmt"/>
-      <line num="76" count="2" type="stmt"/>
-      <line num="77" count="2" type="stmt"/>
-      <line num="78" count="2" type="stmt"/>
-      <line num="79" count="2" type="stmt"/>
-      <line num="80" count="2" type="stmt"/>
-      <line num="81" count="2" type="stmt"/>
-      <line num="82" count="2" type="stmt"/>
+      <line num="76" count="3" type="stmt"/>
+      <line num="77" count="3" type="stmt"/>
+      <line num="78" count="3" type="stmt"/>
+      <line num="79" count="3" type="stmt"/>
+      <line num="80" count="3" type="stmt"/>
+      <line num="81" count="3" type="stmt"/>
+      <line num="82" count="3" type="stmt"/>
       <line num="83" count="0" type="stmt"/>
       <line num="84" count="0" type="stmt"/>
       <line num="85" count="0" type="stmt"/>
       <line num="86" count="0" type="stmt"/>
-      <line num="87" count="2" type="stmt"/>
-      <line num="88" count="2" type="stmt"/>
-      <line num="89" count="2" type="cond" truecount="0" falsecount="1"/>
+      <line num="87" count="3" type="stmt"/>
+      <line num="88" count="3" type="stmt"/>
+      <line num="89" count="3" type="cond" truecount="0" falsecount="1"/>
       <line num="90" count="0" type="stmt"/>
       <line num="91" count="0" type="stmt"/>
       <line num="92" count="0" type="stmt"/>
-      <line num="93" count="2" type="stmt"/>
-      <line num="94" count="2" type="stmt"/>
-      <line num="95" count="2" type="stmt"/>
-      <line num="96" count="2" type="stmt"/>
-      <line num="97" count="2" type="cond" truecount="0" falsecount="1"/>
+      <line num="93" count="3" type="stmt"/>
+      <line num="94" count="3" type="stmt"/>
+      <line num="95" count="3" type="stmt"/>
+      <line num="96" count="3" type="stmt"/>
+      <line num="97" count="3" type="cond" truecount="0" falsecount="1"/>
       <line num="98" count="0" type="stmt"/>
       <line num="99" count="0" type="stmt"/>
       <line num="100" count="0" type="stmt"/>
-      <line num="101" count="2" type="cond" truecount="0" falsecount="1"/>
+      <line num="101" count="3" type="cond" truecount="0" falsecount="1"/>
       <line num="102" count="0" type="stmt"/>
       <line num="103" count="0" type="stmt"/>
       <line num="104" count="0" type="stmt"/>
-      <line num="105" count="2" type="stmt"/>
+      <line num="105" count="3" type="stmt"/>
       <line num="106" count="1" type="stmt"/>
       <line num="107" count="1" type="stmt"/>
       <line num="108" count="1" type="cond" truecount="1" falsecount="0"/>

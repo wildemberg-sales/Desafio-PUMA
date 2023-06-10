@@ -113,7 +113,7 @@ app.delete('/users/:username', (req, res)=>{
             favorites.splice(index, 1);
         }
     })
-    res.status().send(200)
+    res.sendStatus(200)
 })
 
 // atualiza a estrela dos favoritos
@@ -127,7 +127,7 @@ app.put('/users/:username/toggle-star', (req, res)=>{
             val.star = false;
         }
     })
-    res.status().send(200)
+    res.sendStatus(200)
 })
 
 //exportando app 

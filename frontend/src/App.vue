@@ -19,7 +19,9 @@
       
     </div><!--box-users-->
 
+    <button class="button-order" @click="ordenar()">Ordenar em ordem alfabética de nome</button>
   </section>
+  
 </template>
 
 <script>
@@ -68,8 +70,17 @@ export default {
         this.msgErro = err.response.data
         setTimeout(()=>this.msgErro = "", 5000);
       })
-      
-      
+    },
+    ordenar(){
+     this.favorits[0].sort((a, b)=>{
+        if(a.name < b.name){
+          return -1;
+        }else if(a.name > b.name){
+          return 1;
+        }else{
+          return 0;
+        }
+      })
     }
   }
 }
@@ -186,4 +197,22 @@ h2{
   width: 32px;
 }
 
+.button-order{
+  padding: 10px 20px;
+  margin: 0 auto;
+  margin-top: 10px;
+  font-size: 15px;
+  padding: 10px 20px;
+  background-color: rgb(7, 158, 158);
+  color: #fff;
+  border: 0.5px solid #ccc;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.7s;
+  font-weight: bold;
+}
+.button-order:hover{
+  border-color: rgb(8, 207, 207);
+  background-color: rgb(8, 207, 207);
+}
 </style>

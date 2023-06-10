@@ -1,9 +1,9 @@
 <template>
-    <div class="user" v-for="obj in userContent" :key="obj.id">
+    <div class="user" v-for="(obj, index) in userContent" :key="index">
         <img :src="obj.avatar"/>
         <div class="user-content">
             <p>{{ obj.name }}</p>
-            <p><span>Username:</span>{{ obj.username }}</p>
+            <p><span>Username: </span>{{ obj.username }}</p>
         </div>
 
         <div class="user-buttons">

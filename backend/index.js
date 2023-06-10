@@ -43,7 +43,6 @@ function saveFavorite(username){
     axios.get(`https://api.github.com/users/${username}`)
     .then((res)=>{
         favorites.push({
-            "id": favorites.length + 1,
             "username": username, 
             "name": res.data.name, 
             "avatar": res.data.avatar_url, 
@@ -93,15 +92,15 @@ app.post('/users', (req, res)=>{
                 res.status().send(200)
                 
             }else{
-                res.status().send(406);
+                res.status(500).send('Não contém nenhum usuário no GitHub com esse nome.');
                 
             }
         }else{
-            res.status().send(406);
+            res.status(500).send('Esse usuário já está nos favoritos.')
             
         }
     }else{
-        res.status().send(406);
+        res.status(500).send('Já foi atingido o limite de 5 usuários na lista');
         
     }
 })

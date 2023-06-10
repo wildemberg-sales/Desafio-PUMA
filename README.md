@@ -82,3 +82,15 @@ Por fim, a estruturação do back-end ficou de forma que o arquivo index.js era 
     ~~~~bash
     node index.js
     ~~~~
+
+* Execução dos Testes:
+    * Entrando na pasta
+    ~~~~bash
+    cd backend/
+    ~~~~
+    * Iniciar testes
+    ~~~~bash
+    npm run test
+    ~~~~
+    
+**Observação:** Para execução do projeto, o usuário deve executar as duas aplicações ao mesmo tempo e em terminais diferentes para que haja uma correta atividade do projeto.
